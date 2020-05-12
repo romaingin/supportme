@@ -1,0 +1,11 @@
+*{
+    font-family: 'Avenir', sans-serif;
+}
+
+.container_front{
+    height: calc(100% - 8rem);
+}
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+}

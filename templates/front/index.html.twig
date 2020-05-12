@@ -1,0 +1,41 @@
+{% extends 'layout/layout.html.twig' %}
+
+{% block body %}
+<section class="w-4/5 mr-auto ml-auto flex flex-row">
+    <div class="w-1/2 h-auto p-3">
+        <article class="w-full">
+            <p class="text-justify">SupportME est un outil gratuit permettant à votre communauté de vous financer. En seulement quelques minutes, vous obtenez un compte et pouvez ainsi partager votre page et accéder à toutes les fonctionnalités gratuitement.</p>
+        </article>
+        <article class="w-full mt-10">
+            <h2 class="text-blue-500 text-lg font-semibold">Comment ça fonctionne ?</h2>
+            <p class="text-justify">Après avoir créer votre espace, vous pouvez lier votre compte PayPal ou Stripe, puis paramétrer votre page et la partager.<br>Vous disposez également de plusieurs boutons et widgets à intégrer sur vos pages ou sur votre site </p>
+        </article>
+        <article class="w-full mt-10">
+            <h2 class="text-blue-500 text-lg font-semibold">Et c'est gratuit ?</h2>
+            <p class="text-justify">Oui c'est gratuit, et ça le restera. SupportME ne prends aucune commission sur les dons et aucun abonnement n'est necessaire pour profiter de l'ensemble des fonctionnalités. </p>
+        </article>
+    </div>
+    <div class="w-1/2 h-auto py-3 px-5">
+        <article class="w-full p-2">
+            <h2 class="font-bold text-gray-700 text-2xl mb-3">Créateur du jour</h2>
+            <div class="rounded border w-full bg-blue-100 h-auto px-4 py-2 cursor-pointer hover:border-blue-500 transition-all duration-150 ease-in-out">
+                <div class="w-full flex flex-row">
+                    <img src="http://placehold.it/70" class="rounded-full object-cover mr-3" alt="">
+                    <div class="h-full my-2 flex flex-col justify-between">
+                        <p class="font-semibold text-gray-700 mb-1">John Doe <small class="text-gray-500">Designer</small></p>
+                        <button class="cursor-default inline-flex flex-row justify-center items-center rounded-full text-blue-500 border border-blue-500 py-1 px-3 text-xs">
+                            <svg class="fill-current w-4 h-4 mr-2" viewBox="0 0 20 20">
+                                <path d="M16.85,7.275l-3.967-0.577l-1.773-3.593c-0.208-0.423-0.639-0.69-1.11-0.69s-0.902,0.267-1.11,0.69L7.116,6.699L3.148,7.275c-0.466,0.068-0.854,0.394-1,0.842c-0.145,0.448-0.023,0.941,0.314,1.27l2.871,2.799l-0.677,3.951c-0.08,0.464,0.112,0.934,0.493,1.211c0.217,0.156,0.472,0.236,0.728,0.236c0.197,0,0.396-0.048,0.577-0.143l3.547-1.864l3.548,1.864c0.18,0.095,0.381,0.143,0.576,0.143c0.256,0,0.512-0.08,0.729-0.236c0.381-0.277,0.572-0.747,0.492-1.211l-0.678-3.951l2.871-2.799c0.338-0.329,0.459-0.821,0.314-1.27C17.705,7.669,17.316,7.343,16.85,7.275z M13.336,11.754l0.787,4.591l-4.124-2.167l-4.124,2.167l0.788-4.591L3.326,8.5l4.612-0.67l2.062-4.177l2.062,4.177l4.613,0.67L13.336,11.754z"></path>
+                            </svg>
+                            23 personnes me soutiennent
+                        </button>
+                    </div>
+                </div>
+                <p class="text-sm mt-4 p-2 text-justify italic">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur corporis dolor dolores ducimus error iure magnam magni quisquam veniam? A amet, culpa deleniti dignissimos dolorem fugiat incidunt numquam voluptates!"</p>
+            </div>
+        </article>
+    </div>
+
+</section>
+
+{% endblock %}

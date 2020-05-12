@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <title>SupportMe {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('avenir/stylesheet.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body class="h-full bg-white">
+{% set route = app.request.get('_route') %}
+<nav class="h-16 w-full border border-b px-8 py-4 flex flex-row justify-between items-center">
+    <a href="{{ path('index') }}" class="text-gray-800 font-gill font-light text-lg">support<span class="text-blue-500">ME</span></a>
+    <div class="flex flex-row">
+        {% if(route != "app_login") %}
+            {% if user == null %}
+                {% include 'layout/front/navigation.html.twig' %}
+            {% else %}
+                {% include 'layout/back/navigation.html.twig' %}
+            {% endif %}
+        {% else %}
+            <p class="tracking-wider lowercase text-sm">{{ page }}</p>
+        {% endif %}
+    </div>
+</nav>
+<main class="container_front py-4 px-8 overflow-scroll">
+    {% block body %}{% endblock %}
+</main>
+<footer class="h-16 w-full px-8 py-4 flex flex-col items-center border border-b">
+    <p class="text-gray-700 text-sm leading-none text-center">© 2020 - SupportMe<br><small>Tous droits réservés</small></p>
+</footer>
+{% block javascripts %}{% endblock %}
+</body>
+</html>
